@@ -1,0 +1,44 @@
+{
+  "name": "hmr-sandbox",
+  "version": "1.0.0",
+  "description": "A sandbox application which uses webpack4, Docker, nginx, and hot module replacement",
+  "repository": "https://github.com/NoahLE/Docker-nginx-webpack-HMR",
+  "author": "NoahLE",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "webpack-dev-server": "^3.1.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.0",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "lodash": "^4.17.10",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.9.2",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "stylus-loader": "^3.0.2",
+    "url-loader": "^1.0.1",
+    "vue": "^2.5.16",
+    "vue-loader": "^15.2.5",
+    "vue-router": "^3.0.1",
+    "vue-style-loader": "^4.1.1",
+    "vue-template-compiler": "^2.5.16",
+    "vuetify": "^1.1.5",
+    "vuex": "^3.0.1",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.0.7"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=development webpack --config website/webpack.js --progress --hide-modules",
+    "hot": "cross-env NODE_ENV=development webpack-dev-server --config website/webpack.js --progress --hide-modules"
+  }
+}

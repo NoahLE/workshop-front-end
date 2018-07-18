@@ -1,0 +1,16 @@
+version: '3.6'
+services:
+
+  sandbox-app:
+    container_name: 'sandbox-app'
+    image: 'sandbox-app'
+    build:
+      context: .
+      dockerfile: docker/app/Dockerfile
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./:/src:delegated
+    ports:
+      - '3000:3000'
+    command: [yarn, 'hot']
